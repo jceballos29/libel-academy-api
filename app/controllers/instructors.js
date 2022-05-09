@@ -1,5 +1,8 @@
 const { InstructorModel } = require('../models');
-
+const {
+  handleHTTPError,
+  handleSuccess,
+} = require('../utils/handleResponses');
 
 
 const getInstructors = async (req, res) => {
