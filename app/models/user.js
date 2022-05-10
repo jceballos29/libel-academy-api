@@ -47,7 +47,6 @@ const userSchema = new mongoose.Schema(
         course: {
           type: mongoose.Schema.Types.ObjectId,
           ref: 'Course',
-          default: null,
         },
         status: {
           type: String,
