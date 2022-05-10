@@ -44,9 +44,10 @@ const userSchema = new mongoose.Schema(
     },
     enrolledCourses: [
       {
-        course:{
+        course: {
           type: mongoose.Schema.Types.ObjectId,
           ref: 'Course',
+          default: null,
         },
         status: {
           type: String,
@@ -56,9 +57,9 @@ const userSchema = new mongoose.Schema(
         completeLessons: [
           { type: mongoose.Schema.Types.ObjectId, ref: 'Lesson' },
         ],
-        currentLesson: {type: Number, default: 1},
-        completedAt: {type: Date, default: null},
-      }
+        currentLesson: { type: Number, default: 1 },
+        completedAt: { type: Date, default: null },
+      },
     ],
     wishlistCourses: [
       {
@@ -72,7 +73,7 @@ const userSchema = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Review',
       },
-    ]
+    ],
   },
   {
     collection: 'users',
